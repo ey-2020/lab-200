@@ -3,16 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TipCalculatorComponent } from './components/tip-calculator/tip-calculator.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavComponent } from './components/nav/nav.component';
+import { CommunicationsComponent } from './components/communications/communications.component';
+import { TodoEnryComponent } from './components/communications/todo-enry/todo-enry.component';
+import { TodoListComponent } from './components/communications/todo-list/todo-list.component';
+import { TodoService } from './components/communications/todo.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TipCalculatorComponent,
+    DashboardComponent,
+    NavComponent,
+    CommunicationsComponent,
+    TodoEnryComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
