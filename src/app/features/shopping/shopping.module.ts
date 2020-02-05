@@ -6,14 +6,18 @@ import { ListComponent } from './components/list/list.component';
 import { StoreModule } from '@ngrx/store';
 import { featureName, reducers } from './reducers';
 
-
+import { HttpClientModule } from '@angular/common/http';
+import { EffectsModule } from '@ngrx/effects';
+import { ListEffects } from './effects/list.effects';
 
 
 @NgModule({
   declarations: [ShoppingComponent, EntryComponent, ListComponent],
   imports: [
     CommonModule,
-    StoreModule.forFeature(featureName, reducers)
+    HttpClientModule,
+    StoreModule.forFeature(featureName, reducers),
+    EffectsModule.forFeature([ListEffects])
   ],
   exports: [ShoppingComponent]
 })
