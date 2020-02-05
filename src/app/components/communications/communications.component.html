@@ -1,8 +1,9 @@
 <header>
-  <h4>Todo List</h4>
+  <h4>{{ listHeader }}</h4>
 </header>
 <section>
   <app-todo-enry (itemAdded)="onItemAdded($event)"></app-todo-enry>
 
-  <app-todo-list [list]="todoList$ | async"></app-todo-list>
+  <app-todo-list header="Do This Stuff Or Else"
+                 [list]="todoList$ | async"></app-todo-list>
 </section>

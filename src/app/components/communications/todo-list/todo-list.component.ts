@@ -9,6 +9,7 @@ import { TodoItem } from './models';
 export class TodoListComponent implements OnInit {
 
   @Input() list: TodoItem[] = [];
+  @Input() header = 'Your Todo List';
   constructor() { }
 
   ngOnInit() {

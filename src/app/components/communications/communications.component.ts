@@ -3,6 +3,8 @@ import { TodoItem } from './todo-list/models';
 import { TodoService } from './todo.service';
 import { Observable } from 'rxjs';
 
+import { PaymentInformation } from '../models';
+
 @Component({
   selector: 'app-communications',
   templateUrl: './communications.component.html',
@@ -15,6 +17,7 @@ export class CommunicationsComponent implements OnInit {
   //   { description: 'Take Out Trash', completed: false }
   // ];
 
+  listHeader = 'Your Super Awesome Todo List';
   todoList$: Observable<TodoItem[]>;
   constructor(private service: TodoService) { }
 
