@@ -1,4 +1,4 @@
-export const featureName = 'shoppingFeature';
+export const featureName = 'bookshelfFeature';
 import * as fromCollection from './collection.reducer';
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { BookModel } from '../models';

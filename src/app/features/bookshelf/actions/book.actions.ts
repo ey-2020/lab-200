@@ -20,9 +20,8 @@ export const titleAddedSuccessfully = createAction(
   props<{ oldId: string, payload: BookEntity }>()
 );
 
-
 export const bookCollectionLoaded = createAction(
-  '[shopping list] shopping list loaded',
+  '[book collection] book collection loaded',
   props<{ payload: BookEntity[] }>()
 );
 
