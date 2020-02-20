@@ -18,15 +18,15 @@ export const reducers = {
 const selectFeature = createFeatureSelector<BookshelfState>(featureName);
 
 // 2. One per branch
-const selectListBranch = createSelector(selectFeature, f => f.coll);
+const selectCollectionBranch = createSelector(selectFeature, f => f.coll);
 
 // 3. Helpers
-const { selectAll: selectAllListItems } = fromCollection.adapter.getSelectors(selectListBranch);
+const { selectAll: selectAllCollectionItems } = fromCollection.adapter.getSelectors(selectCollectionBranch);
 
 
 // 4. What the components need
 
 // TODO: ShoppingItemModel[]
-export const selectShoppingItemModel = createSelector(selectAllListItems,
-  (items) => items.map(item => ({ ...item, isTemporary: item.id.toString().startsWith('T') } as BookModel))
+export const selectBookModel = createSelector(selectAllCollectionItems,
+  (items) => items.map(item => ({ ...item } as BookModel))
 );
