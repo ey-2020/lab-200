@@ -1,0 +1,11 @@
+<p>book title works!</p>
+<div class="form-group">
+  <label for="title">Title to Add</label>
+  <input class="form-control"
+         name="title"
+         #book>
+  <input type="button"
+         class="btn btn-primary"
+         value="Add Title"
+         (click)="addTitle(book)">
+</div>
