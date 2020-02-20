@@ -17,6 +17,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { CounterEffects } from './effects/counter.effects';
 import { ShoppingModule } from './features/shopping/shopping.module';
+import { BookshelfComponent } from './features/bookshelf/bookshelf.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { ShoppingModule } from './features/shopping/shopping.module';
     CommunicationsComponent,
     TodoEnryComponent,
     TodoListComponent,
-    CounterComponent
+    CounterComponent,
+    BookshelfComponent
   ],
   imports: [
     BrowserModule,
