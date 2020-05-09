@@ -5,10 +5,14 @@ import { TipCalculatorComponent } from './components/tip-calculator/tip-calculat
 import { CommunicationsComponent } from './components/communications/communications.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { ShoppingComponent } from './features/shopping/shopping.component';
-
+import { BookshelfComponent } from './features/bookshelf/bookshelf.component';
 
 
 const routes: Routes = [
+  {
+    path: 'bookshelf',
+    component: BookshelfComponent
+  },
   {
     path: 'shopping',
     component: ShoppingComponent
