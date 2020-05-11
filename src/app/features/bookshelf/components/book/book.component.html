@@ -1,11 +1,23 @@
-<p>book title works!</p>
 <div class="form-group">
-  <label for="title">Title to Add</label>
+  <label for="title">Title</label>
   <input class="form-control"
          name="title"
-         #book>
+         #title>
+  <label for="author">Author</label>
+  <input class="form-control"
+         name="author"
+         #author>
+  <label for="format">Format</label>
+  <select class="form-control"
+         name="format"
+         #format>
+         <option value="">Select a publication format</option>
+         <option value="Hardcover">Hardcover</option>
+         <option value="Paperback">Paperback</option>
+         <option value="E-Book">E-Book</option>
+  </select>
   <input type="button"
-         class="btn btn-primary"
+         class="btn btn-primary margin-top"
          value="Add Title"
-         (click)="addTitle(book)">
+         (click)="addTitle(title, author, format)">
 </div>

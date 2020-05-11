@@ -15,12 +15,16 @@ export class BookComponent implements OnInit {
   ngOnInit() {
   }
 
-  addTitle(titleEl: HTMLInputElement) {
+  addTitle(titleEl: HTMLInputElement,
+    authorEl: HTMLInputElement,
+    foramtEl: HTMLInputElement) {
     const title = titleEl.value;
-    const author = 'auth';
-    const format = 'ebook';
+    const author = authorEl.value;
+    const format = foramtEl.value;
     this.store.dispatch(titleAdded({ title, author, format }));
     titleEl.value = '';
+    authorEl.value = '';
+    foramtEl.value = '';
     titleEl.focus();
   }
 

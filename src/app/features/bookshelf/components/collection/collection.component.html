@@ -1,1 +1,7 @@
-<p>collection works!</p>
+<p><b>Your collection of books:</b></p>
+<ul class="list-unstyled">
+    <li class="alert alert-info"
+        *ngFor="let item of model">
+      <span>{{item.title}} by {{item.author}} [{{item.format}}]</span>
+    </li>
+  </ul>
